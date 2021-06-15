@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import automation_pages.MyAccountPage;
 import automation_pages.MyAddressesPage;
 import automation_pages.MyAuthenticationPage;
-import automation_pages.MyPersonalInfo;
-import automation_pages.MyWishLists;
+import automation_pages.MyPersonalInfoPage;
+import automation_pages.MyWishListsPage;
 import automation_pages.LogInPage;
 
 public class BaseTests {
@@ -23,8 +23,8 @@ public class BaseTests {
 	MyAccountPage myAccountPage;
 	MyAddressesPage myAddressesPage;
 	MyAuthenticationPage myAuthenticationPage;
-	MyPersonalInfo myPersonalInfo;
-	MyWishLists myWishLists;
+	MyPersonalInfoPage myPersonalInfo;
+	MyWishListsPage myWishLists;
 
 	ExcelReader citacIzExcela;
 	String homeUrl;
@@ -40,8 +40,8 @@ public class BaseTests {
 		myAccountPage = new MyAccountPage(driver);
 		myAddressesPage = new MyAddressesPage(driver);
 		myAuthenticationPage = new MyAuthenticationPage(driver);
-		myPersonalInfo = new MyPersonalInfo(driver);
-		myWishLists = new MyWishLists(driver);
+		myPersonalInfo = new MyPersonalInfoPage(driver);
+		myWishLists = new MyWishListsPage(driver);
 
 		citacIzExcela = new ExcelReader("data/Test_plan.xlsx");
 		homeUrl = "http://automationpractice.com/index.php/";

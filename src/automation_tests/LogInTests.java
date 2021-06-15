@@ -37,6 +37,8 @@ public class LogInTests extends BaseTests {
 
 	}
 
+
+		
 	@Test(priority = 5)
 	public void logInInvalidEmailValidPassword() throws InterruptedException {
 		logInPage.signInTabClick();

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MyPersonalInfo {
+public class MyPersonalInfoPage {
 	WebDriver driver;
 
 	WebElement curentPasswordField;
@@ -13,7 +13,7 @@ public class MyPersonalInfo {
 	WebElement saveButton;
 	WebElement succesfullUpdate;
 
-	public MyPersonalInfo(WebDriver driver) {
+	public MyPersonalInfoPage(WebDriver driver) {
 		super();
 		this.driver = driver;
 	}

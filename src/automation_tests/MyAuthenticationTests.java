@@ -8,17 +8,17 @@ import automation_pages.MyAuthenticationPage;
 
 public class MyAuthenticationTests extends BaseTests {
 
-	private String firstName1;
-	private String lastName1;
-	private String password1;
-	private String day;
-	private String month;
-	private String year;
-	private String address1;
-	private String city1;
-	private String zip1;
-	private String mobile1;
-	private String assignAddress;
+	//private String firstName1;
+	//private String lastName1;
+	//private String password1;
+	//private String day;
+	//private String month;
+	//private String year;
+	//private String address1;
+	//private String city1;
+	//private String zip1;
+	//private String mobile1;
+	//private String assignAddress;
 
 	@BeforeMethod
 	public void preSvakogTesta() {
@@ -28,7 +28,7 @@ public class MyAuthenticationTests extends BaseTests {
 
 	@Test(priority = 0)
 	public void createAnAccount() throws InterruptedException {
-		logInPage.signInTabClick();
+		/*logInPage.signInTabClick();
 		Thread.sleep(2000);
 		String emailAddress = citacIzExcela.getStringData("LOG IN", 6, 3);
 		String password = citacIzExcela.getStringData("LOG IN", 7, 3);
@@ -39,17 +39,19 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		logInPage.signIn();
 		Thread.sleep(2000);
-
+		*/
+		logInPage.signInTabClick();
 		String emailAddress1 = citacIzExcela.getStringData("MY AUTHENTICATION", 6, 3);
 		myAuthenticationPage.emailAddress1ForAccount(emailAddress1);
 		Thread.sleep(2000);
-
 		myAuthenticationPage.accountButton();
+		Thread.sleep(2000);
 		myAuthenticationPage.mrsCheckBox();
+		Thread.sleep(2000);
+		
 
 		String firstName1 = citacIzExcela.getStringData("MY AUTHENTICATION", 9, 3);
 		String lastName1 = citacIzExcela.getStringData("MY AUTHENTICATION", 10, 3);
-
 		String password1 = citacIzExcela.getStringData("MY AUTHENTICATION", 11, 3);
 		String day = citacIzExcela.getStringData("MY AUTHENTICATION", 12, 3);
 		String month = citacIzExcela.getStringData("MY AUTHENTICATION", 13, 3);
@@ -77,7 +79,7 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		myAuthenticationPage.city1Field(city1);
 		Thread.sleep(2000);
-		myAuthenticationPage.getSelectState1CheckBox();
+		myAuthenticationPage.selectState1ChecBox(state1);
 		Thread.sleep(2000);
 		myAuthenticationPage.zip1Field(zip1);
 		Thread.sleep(2000);
@@ -87,6 +89,9 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		myAuthenticationPage.registerButton();
 		Thread.sleep(2000);
+		
+		String textForAssertion = citacIzExcela.getStringData("MY AUTHENTICATION", 23, 3);
+		String actualText = myAuthenticationPage.getSuccesfulRegisterLabel().getText();
 
 	}
 

@@ -32,7 +32,7 @@ public class MyAuthenticationPage {
 	}
 
 	public WebElement getEmailAddressFor1AccountField() {
-		return driver.findElement(By.id("id=\"email_create\""));
+		return driver.findElement(By.id("email_create"));
 	}
 
 	public WebElement getCreateAnAccountButton() {
@@ -48,7 +48,7 @@ public class MyAuthenticationPage {
 	}
 
 	public WebElement getLastName1Field() {
-		return driver.findElement(By.xpath("customer_lastname"));
+		return driver.findElement(By.id("customer_lastname"));
 	}
 
 	public WebElement getPassword1Field() {
@@ -79,7 +79,8 @@ public class MyAuthenticationPage {
 	}*/
 	
 	public Select getSelectState1CheckBox() {
-		selectState1CheckBox = new Select(driver.findElement(By.xpath("")));
+		selectState1CheckBox = new Select(driver.findElement(By.id("uniform-id_state")));
+		//selectState1CheckBox = new Select(driver.findElement(By.id("id_state")));
 		return selectState1CheckBox;
 	}
 	
@@ -106,6 +107,7 @@ public class MyAuthenticationPage {
 
 	public WebElement getSuccesfulRegisterLabel() {
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/p"));
+		
 	}
 
 	public void emailAddress1ForAccount(String emailAddress1) {
