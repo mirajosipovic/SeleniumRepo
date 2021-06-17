@@ -15,7 +15,7 @@ public class MyAddressesTests extends BaseTests {
 		driver.navigate().to(homeUrl);
 		driver.manage().window().maximize();
 	}
-
+	
 	@Test(priority = 0)
 	public void updateAddress() throws InterruptedException {
 		logInPage.signInTabClick();
@@ -30,7 +30,6 @@ public class MyAddressesTests extends BaseTests {
 		logInPage.signIn();
 		Thread.sleep(2000);
 		
-
 		myAccountPage.myAddress();
 		Thread.sleep(2000);
 		myAddressesPage.updateButton();
@@ -43,15 +42,15 @@ public class MyAddressesTests extends BaseTests {
 		String city = citacIzExcela.getStringData("MY ADDRESS", 9, 3);
 		myAddressesPage.cityField(city);
 		Thread.sleep(2000);
-		
+
 		String state = citacIzExcela.getStringData("MY ADDRESS", 10, 3);
 		myAddressesPage.selectStateField(state);
+		Thread.sleep(5200);
+				
+		String zip = citacIzExcela.getStringData("MY ADDRESS", 11, 3);
+		myAddressesPage.zipPostalCodeField(null);
 		Thread.sleep(2000);
-		
-		int zip = citacIzExcela.getIntegerData("MY ADDRESS", 11, 3);
-		myAddressesPage.getZipPostalCodeField();
-		Thread.sleep(2000);
-		
+			 
 		String homePhone = citacIzExcela.getStringData("MY ADDRESS", 12, 3);
 		myAddressesPage.homePhoneField(homePhone);
 		Thread.sleep(2000);
@@ -61,13 +60,9 @@ public class MyAddressesTests extends BaseTests {
 		Thread.sleep(2000);
 		
 		myAddressesPage.saveButton();
-
-		Thread.sleep(2000);
-		//myAddressesPage.saveButton(); // nije dobar lokator za saveButton
-		//Thread.sleep(2000);
+		Thread.sleep(2000);	 	
 	}
 
-	/*
 	@Test(priority = 5)
 	public void addAddress() throws InterruptedException {
 		logInPage.signInTabClick();
@@ -86,44 +81,41 @@ public class MyAddressesTests extends BaseTests {
 		Thread.sleep(2000);
 		
 		myAddressesPage.addNewAddressButton();
-		Thread.sleep(2000);
+		Thread.sleep(2000);	
 		
-		String address = citacIzExcela.getStringData("MY ADDRESS", 22, 3);
+		String address = citacIzExcela.getStringData("MY ADDRESS", 28, 3);
 		myAddressesPage.addressField(address);
 		Thread.sleep(2000);
 		
-		String city = citacIzExcela.getStringData("MY ADDRESS", 23, 3);
+		String city = citacIzExcela.getStringData("MY ADDRESS", 29, 3);
 		myAddressesPage.cityField(city);
-		Thread.sleep(2000);
-		
-		String state = citacIzExcela.getStringData("MY ADDRESS", 24, 3);
+		Thread.sleep(2000);		
+	
+		String state = citacIzExcela.getStringData("MY ADDRESS", 30, 3);
 		myAddressesPage.selectStateField(state);
 		Thread.sleep(2000);
-		
-		String zip = citacIzExcela.getStringData("MY ADDRESS", 25, 3);
-		myAddressesPage.zipPostalCodeField(zip);
+	
+		String zip = citacIzExcela.getStringData("MY ADDRESS", 31, 3);
+		myAddressesPage.zipPostalCodeField(null);
 		Thread.sleep(2000);
 		
-		String homePhone = citacIzExcela.getStringData("MY ADDRESS", 26, 3);
+		String homePhone = citacIzExcela.getStringData("MY ADDRESS", 32, 3);
 		myAddressesPage.homePhoneField(homePhone);
 		Thread.sleep(2000);
 		
-		String mobilePhone = citacIzExcela.getStringData("MY ADDRESS", 27, 3);
+		String mobilePhone = citacIzExcela.getStringData("MY ADDRESS", 33, 3);
 		myAddressesPage.mobilePhoneField(mobilePhone);
 		Thread.sleep(2000);
 		
-		String assignAnAddress = citacIzExcela.getStringData("MY ADDRESS", 28, 3);
+		String assignAnAddress = citacIzExcela.getStringData("MY ADDRESS", 34, 3);
 		myAddressesPage.assignAnAddressField(assignAnAddress);
 		Thread.sleep(2000);
 		
 		myAddressesPage.saveButton();
-		Thread.sleep(2000);
-		
-		//fali assert
+		Thread.sleep(2000);		 
+	}
 
-	}*/
-
-	/*@Test(priority = 10)
+	@Test(priority = 10)
 	public void removeAddress() throws InterruptedException {
 		logInPage.signInTabClick();
 		Thread.sleep(2000);
@@ -142,10 +134,7 @@ public class MyAddressesTests extends BaseTests {
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		Thread.sleep(2000);
-		
-		//fali assert
 	}
-	*/
 
 	@AfterMethod
 	public void posleSvakogTesta() {

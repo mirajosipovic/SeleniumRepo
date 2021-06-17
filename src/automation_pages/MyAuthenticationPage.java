@@ -14,11 +14,15 @@ public class MyAuthenticationPage {
 	WebElement firstName1Field;
 	WebElement lastName1Field;
 	WebElement password1Field;
+	
 	Select selectDayOfBirth;
 	Select selectMonthOfBirth;
 	Select selectYearOfBirth;
+	
 	WebElement address1Field;
+	
 	Select selectState1CheckBox;
+	
 	WebElement city1Field;
 	WebElement zip1Field;
 	WebElement mobilePhone1Field;
@@ -74,14 +78,8 @@ public class MyAuthenticationPage {
 		return driver.findElement(By.id("address1"));
 	}
 	
-	/*public WebElement getState1CheckBox() {
-		return driver.findElement(By.xpath("")); // dodaj lokator
-	}*/
-	
 	public Select getSelectState1CheckBox() {
-		selectState1CheckBox = new Select(driver.findElement(By.id("uniform-id_state")));
-		//selectState1CheckBox = new Select(driver.findElement(By.id("id_state")));
-		return selectState1CheckBox;
+		return selectState1CheckBox = new Select(driver.findElement(By.id("id_state")));
 	}
 	
 	public WebElement getCity1Field() {
@@ -107,7 +105,6 @@ public class MyAuthenticationPage {
 
 	public WebElement getSuccesfulRegisterLabel() {
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/p"));
-		
 	}
 
 	public void emailAddress1ForAccount(String emailAddress1) {

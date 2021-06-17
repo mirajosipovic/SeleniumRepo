@@ -36,8 +36,5 @@ public class ExcelReader {
 		cell = row.getCell(columnNumber);
 		return (int) cell.getNumericCellValue();
 	}
-	
+
 }
-
-
-

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation_tests.MyAuthenticationTests">
+      <class name="automation_tests.MyWishListsTests">
         <methods>
-          <include name="posleSvakogTesta"/>
+          <include name="removeWishList"/>
           <include name="preSvihTestova"/>
+          <include name="posleSvakogTesta"/>
           <include name="preSvakogTesta"/>
-          <include name="createAnAccount"/>
           <include name="posleSvihTestova"/>
         </methods>
-      </class> <!-- automation_tests.MyAuthenticationTests -->
+      </class> <!-- automation_tests.MyWishListsTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -15,7 +15,7 @@ public class MyAddressesPage {
 	
 	WebElement addNewAddressButton;
 	WebElement backToYourAccountButton; 
-	WebElement addressField;  // nije dobar lokator za ovaj element
+	WebElement addressField;  
 	WebElement cityField;
 	
 	//WebElement stateField;
@@ -35,8 +35,8 @@ public class MyAddressesPage {
 	}
 
 	public WebElement getUpdateButton() {
+		//return driver.findElement(By.linkText("Update"));
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[9]/a[1]/span"));
-		//return driver.findElement(By.className("address_update"));
 	}
 
 	public WebElement getDeleteButton() {
@@ -44,24 +44,19 @@ public class MyAddressesPage {
 	}
 
 	public WebElement getAddNewAddressButton() {
+		//return driver.findElement(By.className("btn btn-default button button-medium"));
+		//return driver.findElement(By.linkText("Add an address"));
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[2]/a/span"));
-
 	}
 
 	public WebElement getBackToYourAccountButton() {
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li/a/span"));
 	}
 
-	/*public WebElement getAddressField() {
-		return driver.findElement(By.id("address1"));                      //nije dobro
-		//return driver.findElement(By.xpath("//*[@id=\"address1\"]"));    //nije dobro		
-	}
-	*/
 	public WebElement getAddressField() {
 		return driver.findElement(By.id("address1"));
 	}
 	
-
 	public WebElement getCityField() {
 		return driver.findElement(By.id("city"));
 	}
@@ -78,6 +73,7 @@ public class MyAddressesPage {
 	
 	public Select getSelectStateField() {
 		return selectStateField = new Select(driver.findElement(By.id("id_state")));
+	
 		//return selectStateField = new Select(driver.findElement(By.id("uniform-id_state"))); //probaj ovo
 	}
 
@@ -136,7 +132,7 @@ public class MyAddressesPage {
 	}
 
 	public void selectStateField(String state) {
-		this.getSelectStateField().selectByVisibleText(state);
+		this.getSelectStateField().selectByVisibleText("Alabama");
 		}
 	
 	/*

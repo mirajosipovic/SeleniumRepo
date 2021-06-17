@@ -13,8 +13,6 @@ public class LogInPage {
 	WebElement signInButton;
 	WebElement signOutButton;
 	WebElement alertDanger;
-	// WebElement contactUs;
-	// WebElement welcomeToYourAccount;
 
 	public LogInPage(WebDriver driver) {
 		super();
@@ -63,8 +61,11 @@ public class LogInPage {
 		this.getSignInButton().click();
 	}
 
-	public void signOut() {
-		this.getSignOutButton().click();
+	// public void signOut() {
+	// this.getSignOutButton().click();
+	// }
+	public String textFromSignOut() {
+		return this.getSignOutButton().getText();
 	}
 
 	public void alertDanger() {

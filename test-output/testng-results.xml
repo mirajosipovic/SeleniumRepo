@@ -2,31 +2,60 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-15T21:15:37 CEST" name="Default suite" finished-at="2021-06-15T21:16:06 CEST" duration-ms="29539">
+  <suite started-at="2021-06-17T20:12:22 CEST" name="Default suite" finished-at="2021-06-17T20:13:56 CEST" duration-ms="94299">
     <groups>
     </groups>
-    <test started-at="2021-06-15T21:15:37 CEST" name="Default test" finished-at="2021-06-15T21:16:06 CEST" duration-ms="29539">
-      <class name="automation_tests.MyAuthenticationTests">
-        <test-method is-config="true" signature="preSvihTestova()[pri:0, instance:automation_tests.MyAuthenticationTests@156b88f5]" started-at="2021-06-15T21:15:37 CEST" name="preSvihTestova" finished-at="2021-06-15T21:15:46 CEST" duration-ms="8940" status="PASS">
+    <test started-at="2021-06-17T20:12:22 CEST" name="Default test" finished-at="2021-06-17T20:13:56 CEST" duration-ms="94299">
+      <class name="automation_tests.MyWishListsTests">
+        <test-method is-config="true" signature="preSvihTestova()[pri:0, instance:automation_tests.MyWishListsTests@156b88f5]" started-at="2021-06-17T20:12:22 CEST" name="preSvihTestova" finished-at="2021-06-17T20:12:29 CEST" duration-ms="6572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSvihTestova -->
-        <test-method is-config="true" signature="preSvakogTesta()[pri:0, instance:automation_tests.MyAuthenticationTests@156b88f5]" started-at="2021-06-15T21:15:46 CEST" name="preSvakogTesta" finished-at="2021-06-15T21:15:54 CEST" duration-ms="8348" status="PASS">
+        <test-method is-config="true" signature="preSvakogTesta()[pri:0, instance:automation_tests.MyWishListsTests@156b88f5]" started-at="2021-06-17T20:12:29 CEST" name="preSvakogTesta" finished-at="2021-06-17T20:12:44 CEST" duration-ms="15362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSvakogTesta -->
-        <test-method signature="createAnAccount()[pri:0, instance:automation_tests.MyAuthenticationTests@156b88f5]" started-at="2021-06-15T21:15:54 CEST" name="createAnAccount" finished-at="2021-06-15T21:16:04 CEST" duration-ms="9980" status="FAIL">
-          <exception class="java.lang.IllegalStateException">
+        <test-method signature="removeWishList()[pri:10, instance:automation_tests.MyWishListsTests@156b88f5]" started-at="2021-06-17T20:12:44 CEST" name="removeWishList" finished-at="2021-06-17T20:13:56 CEST" duration-ms="71955" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot get a STRING value from a NUMERIC cell]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="center_column"]/div/div[2]/ul/li/a/span"}
+  (Session info: chrome=91.0.4472.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DRUGI', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Korisnik\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55960}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ff0af3626c8a9b520a279abb5920534
+*** Element info: {Using=xpath, value=//*[@id="center_column"]/div/div[2]/ul/li/a/span}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
-at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:1022)
-at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:393)
-at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:342)
-at automation_tests.ExcelReader.getStringData(ExcelReader.java:30)
-at automation_tests.MyAuthenticationTests.createAnAccount(MyAuthenticationTests.java:55)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="center_column"]/div/div[2]/ul/li/a/span"}
+  (Session info: chrome=91.0.4472.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DRUGI', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Korisnik\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55960}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ff0af3626c8a9b520a279abb5920534
+*** Element info: {Using=xpath, value=//*[@id="center_column"]/div/div[2]/ul/li/a/span}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at automation_pages.MyAccountPage.getMyWishListsButton(MyAccountPage.java:39)
+at automation_pages.MyAccountPage.myWishLists(MyAccountPage.java:63)
+at automation_tests.MyWishListsTests.removeWishList(MyWishListsTests.java:106)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,19 +86,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAnAccount -->
-        <test-method is-config="true" signature="posleSvakogTesta()[pri:0, instance:automation_tests.MyAuthenticationTests@156b88f5]" started-at="2021-06-15T21:16:04 CEST" name="posleSvakogTesta" finished-at="2021-06-15T21:16:06 CEST" duration-ms="1621" status="PASS">
+        </test-method> <!-- removeWishList -->
+        <test-method is-config="true" signature="posleSvakogTesta()[pri:0, instance:automation_tests.MyWishListsTests@156b88f5]" started-at="2021-06-17T20:13:56 CEST" name="posleSvakogTesta" finished-at="2021-06-17T20:13:56 CEST" duration-ms="107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- posleSvakogTesta -->
-        <test-method is-config="true" signature="posleSvihTestova()[pri:0, instance:automation_tests.MyAuthenticationTests@156b88f5]" started-at="2021-06-15T21:16:06 CEST" name="posleSvihTestova" finished-at="2021-06-15T21:16:06 CEST" duration-ms="523" status="PASS">
+        <test-method is-config="true" signature="posleSvihTestova()[pri:0, instance:automation_tests.MyWishListsTests@156b88f5]" started-at="2021-06-17T20:13:56 CEST" name="posleSvihTestova" finished-at="2021-06-17T20:13:56 CEST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- posleSvihTestova -->
-      </class> <!-- automation_tests.MyAuthenticationTests -->
+      </class> <!-- automation_tests.MyWishListsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

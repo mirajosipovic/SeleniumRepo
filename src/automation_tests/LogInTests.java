@@ -31,14 +31,12 @@ public class LogInTests extends BaseTests {
 		logInPage.signIn();
 		Thread.sleep(2000);
 
-		String textForAssertion = citacIzExcela.getStringData("LOG IN", 10, 3);
-		String actualText = logInPage.getSignOutButton().getText();
-		Thread.sleep(2000);
-
+		//String textForAssertion = citacIzExcela.getStringData("LOG IN", 10, 3);
+		//String actualText = logInPage.getSignOutButton().getText();
+		String actualText = logInPage.textFromSignOut();
+		assertEquals(actualText, "Sign out"); 
 	}
-
-
-		
+	
 	@Test(priority = 5)
 	public void logInInvalidEmailValidPassword() throws InterruptedException {
 		logInPage.signInTabClick();
@@ -55,7 +53,6 @@ public class LogInTests extends BaseTests {
 
 		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 26, 3);
 		String actualText = logInPage.getAlertDanger().getText();
-
 	}
 
 	@Test(priority = 10)
@@ -74,7 +71,6 @@ public class LogInTests extends BaseTests {
 
 		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 41, 3);
 		String actualText = logInPage.getAlertDanger().getText();
-
 	}
 
 	@Test(priority = 15)
@@ -86,7 +82,6 @@ public class LogInTests extends BaseTests {
 
 		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 56, 3);
 		String actualText = logInPage.getAlertDanger().getText();
-
 	}
 
 	@Test(priority = 20)
@@ -101,12 +96,11 @@ public class LogInTests extends BaseTests {
 		Thread.sleep(3000);
 		logInPage.signIn();
 		Thread.sleep(2000);
-		logInPage.signOut();
+		logInPage.textFromSignOut();
 		Thread.sleep(2000);
 
 		String textForAsssertion = citacIzExcela.getStringData("LOG OUT", 11, 3);
 		String actualText = logInPage.getSignOutButton().getText();
-
 	}
 
 	@AfterMethod

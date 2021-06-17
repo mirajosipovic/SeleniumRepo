@@ -8,18 +8,6 @@ import automation_pages.MyAuthenticationPage;
 
 public class MyAuthenticationTests extends BaseTests {
 
-	//private String firstName1;
-	//private String lastName1;
-	//private String password1;
-	//private String day;
-	//private String month;
-	//private String year;
-	//private String address1;
-	//private String city1;
-	//private String zip1;
-	//private String mobile1;
-	//private String assignAddress;
-
 	@BeforeMethod
 	public void preSvakogTesta() {
 		driver.navigate().to(homeUrl);
@@ -28,7 +16,7 @@ public class MyAuthenticationTests extends BaseTests {
 
 	@Test(priority = 0)
 	public void createAnAccount() throws InterruptedException {
-		/*logInPage.signInTabClick();
+		logInPage.signInTabClick();
 		Thread.sleep(2000);
 		String emailAddress = citacIzExcela.getStringData("LOG IN", 6, 3);
 		String password = citacIzExcela.getStringData("LOG IN", 7, 3);
@@ -39,7 +27,7 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		logInPage.signIn();
 		Thread.sleep(2000);
-		*/
+
 		logInPage.signInTabClick();
 		String emailAddress1 = citacIzExcela.getStringData("MY AUTHENTICATION", 6, 3);
 		myAuthenticationPage.emailAddress1ForAccount(emailAddress1);
@@ -48,7 +36,6 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		myAuthenticationPage.mrsCheckBox();
 		Thread.sleep(2000);
-		
 
 		String firstName1 = citacIzExcela.getStringData("MY AUTHENTICATION", 9, 3);
 		String lastName1 = citacIzExcela.getStringData("MY AUTHENTICATION", 10, 3);
@@ -89,7 +76,7 @@ public class MyAuthenticationTests extends BaseTests {
 		Thread.sleep(2000);
 		myAuthenticationPage.registerButton();
 		Thread.sleep(2000);
-		
+
 		String textForAssertion = citacIzExcela.getStringData("MY AUTHENTICATION", 23, 3);
 		String actualText = myAuthenticationPage.getSuccesfulRegisterLabel().getText();
 
