@@ -5,22 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-
-
 public class MyAddressesPage {
 	WebDriver driver;
 
 	WebElement updateButton;
 	WebElement deleteButton;
-	
+
 	WebElement addNewAddressButton;
-	WebElement backToYourAccountButton; 
-	WebElement addressField;  
+	WebElement backToYourAccountButton;
+	WebElement addressField;
 	WebElement cityField;
-	
-	//WebElement stateField;
 	Select selectStateField;
-	
 	WebElement zipPostalCodeField;
 	WebElement countryField;
 	WebElement homePhoneField;
@@ -35,7 +30,6 @@ public class MyAddressesPage {
 	}
 
 	public WebElement getUpdateButton() {
-		//return driver.findElement(By.linkText("Update"));
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[9]/a[1]/span"));
 	}
 
@@ -44,9 +38,7 @@ public class MyAddressesPage {
 	}
 
 	public WebElement getAddNewAddressButton() {
-		//return driver.findElement(By.className("btn btn-default button button-medium"));
-		//return driver.findElement(By.linkText("Add an address"));
-		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[2]/a/span"));
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[2]/a"));
 	}
 
 	public WebElement getBackToYourAccountButton() {
@@ -54,27 +46,15 @@ public class MyAddressesPage {
 	}
 
 	public WebElement getAddressField() {
-		return driver.findElement(By.id("address1"));
+		return driver.findElement(By.cssSelector("#address1"));
 	}
-	
+
 	public WebElement getCityField() {
 		return driver.findElement(By.id("city"));
 	}
 
-	/*public WebElement getStateField() {
-		return driver.findElement(By.xpath("//*[@id=\"id_state\"]/option[2]"));                                     
-		return driver.findElement(By.id("uniform-id_state"));
-	}*/
-	
-	/*public Select getSelect
-		selectStateField = new Select(driver.findElement(By.id("uniform-id_state")));
-		//return selectStateField = new Select(driver.findElement(By.id("uniform-id_state")));
-	}*/
-	
 	public Select getSelectStateField() {
 		return selectStateField = new Select(driver.findElement(By.id("id_state")));
-	
-		//return selectStateField = new Select(driver.findElement(By.id("uniform-id_state"))); //probaj ovo
 	}
 
 	public WebElement getZipPostalCodeField() {
@@ -99,11 +79,6 @@ public class MyAddressesPage {
 
 	public WebElement getSaveButton() {
 		return driver.findElement(By.xpath("//*[@id=\"submitAddress\"]"));
-		// return driver.findElement(By.id("submitAddress"));
-		// return driver.findElement(By.className("button-medium"));
-		// return driver.findElement(By.xpath("//*[@id=\"submitAddress\"]/span/i"));
-		// return driver.findElement(By.xpath("//*[@id=\"submitAddress\"]/span"));
-
 	}
 
 	public WebElement getBackToYourAddress() {
@@ -133,21 +108,14 @@ public class MyAddressesPage {
 
 	public void selectStateField(String state) {
 		this.getSelectStateField().selectByVisibleText("Alabama");
-		}
-	
-	/*
-	public void selectState(String state) {
-		Select state1 = new Select(driver.findElement(By.id("uniform-id_state")));
-		state1.selectByVisibleText(state);
 	}
-	*/
-	
+
 	public void cityField(String city) {
 		this.getCityField().clear();
 		this.getCityField().sendKeys(city);
-	}	
+	}
 
-	public void zipPostalCodeField(CharSequence[] zip) {
+	public void zipPostalCodeField(String zip) {
 		this.getZipPostalCodeField().clear();
 		this.getZipPostalCodeField().sendKeys(zip);
 	}

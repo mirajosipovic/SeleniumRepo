@@ -13,6 +13,8 @@ public class LogInPage {
 	WebElement signInButton;
 	WebElement signOutButton;
 	WebElement alertDanger;
+	WebElement wrongCredencial;
+	WebElement emptyCredencial;
 
 	public LogInPage(WebDriver driver) {
 		super();
@@ -42,6 +44,14 @@ public class LogInPage {
 	public WebElement getAlertDanger() {
 		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]"));
 	}
+	
+	public WebElement getWrongCredentials() {
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/ol/li"));
+	}                                   
+
+	public WebElement getEmptyCredentials() {
+		return driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/ol/li"));
+	}
 
 	public void signInTabClick() {
 		this.getSignInTabClick().click();
@@ -61,9 +71,7 @@ public class LogInPage {
 		this.getSignInButton().click();
 	}
 
-	// public void signOut() {
-	// this.getSignOutButton().click();
-	// }
+	
 	public String textFromSignOut() {
 		return this.getSignOutButton().getText();
 	}

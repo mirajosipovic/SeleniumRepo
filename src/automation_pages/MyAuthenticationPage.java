@@ -100,7 +100,6 @@ public class MyAuthenticationPage {
 
 	public WebElement getRegisterButton1() {
 		return driver.findElement(By.xpath("//*[@id=\"submitAccount\"]/span"));
-		// return driver.findElement(By.id("submitAccount"));
 	}
 
 	public WebElement getSuccesfulRegisterLabel() {

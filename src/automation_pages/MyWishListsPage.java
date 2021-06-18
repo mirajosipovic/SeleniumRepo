@@ -14,7 +14,9 @@ public class MyWishListsPage {
 	WebElement deleteWishList1Label;
 	WebElement deleteWishList2Label;
 	WebElement deleteWishList3Label;
+	WebElement welcomeToYourAccount;
 	WebElement backToYourAccount;
+	WebElement directLink;
 
 	public MyWishListsPage(WebDriver driver) {
 		super();
@@ -38,19 +40,27 @@ public class MyWishListsPage {
 	}
 
 	public WebElement getDeleteWishList1Label() {
-		return driver.findElement(By.xpath("//*[@id=\"wishlist_35284\"]/td[6]/a/i"));
+		return driver.findElement(By.className("icon"));	
 	}
 
 	public WebElement getDeleteWishList2Label() {
-		return driver.findElement(By.xpath("//*[@id=\"wishlist_35285\"]/td[6]/a/i"));
+		return driver.findElement(By.className("icon"));
 	}
 
 	public WebElement getDeleteWishList3Label() {
-		return driver.findElement(By.xpath("//*[@id=\"wishlist_35296\"]/td[6]/a/i"));
+		return driver.findElement(By.className("icon"));
 	}
 
 	public WebElement getBackToYourAccount() {
 		return driver.findElement(By.xpath("//*[@id=\"mywishlist\"]/ul/li[1]/a/span"));
+	}
+
+	public WebElement getWelcomeToYourAccount() {
+		return driver.findElement(By.className("info-account"));
+	}
+	
+	public WebElement getDirectLink() {
+		return driver.findElement(By.xpath("//*[@id=\"wishlist_35525\"]/td[5]/a"));
 	}
 
 	public void nameOfWishList1(String nameOfWish1) {
@@ -68,8 +78,8 @@ public class MyWishListsPage {
 		this.getNameOfWishList3Field().sendKeys(nameOfWish3);
 	}
 
-	public void saveButton() {
-		this.getSaveButton().click();
+	public String saveButton() {
+		return this.getSaveButton().getText();
 	}
 
 	public void deleteWishList1() {
@@ -86,6 +96,14 @@ public class MyWishListsPage {
 
 	public void backToYourAccount() {
 		this.getBackToYourAccount().click();
+	}
+	
+	public String textFromWelcomeToYourAccount() {
+		return this.getWelcomeToYourAccount().getText();
+	}
+	
+	public String textFromDirectLink() {
+		return this.getDirectLink().getText();
 	}
 
 }

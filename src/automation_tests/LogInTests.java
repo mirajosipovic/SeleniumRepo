@@ -31,12 +31,11 @@ public class LogInTests extends BaseTests {
 		logInPage.signIn();
 		Thread.sleep(2000);
 
-		//String textForAssertion = citacIzExcela.getStringData("LOG IN", 10, 3);
-		//String actualText = logInPage.getSignOutButton().getText();
-		String actualText = logInPage.textFromSignOut();
-		assertEquals(actualText, "Sign out"); 
+		String textForAssertion = citacIzExcela.getStringData("Login", 21, 2);
+		String actualText = logInPage.getSignOutButton().getText();
+		assertEquals(actualText, textForAssertion);
 	}
-	
+
 	@Test(priority = 5)
 	public void logInInvalidEmailValidPassword() throws InterruptedException {
 		logInPage.signInTabClick();
@@ -50,9 +49,10 @@ public class LogInTests extends BaseTests {
 		Thread.sleep(3000);
 		logInPage.signIn();
 		Thread.sleep(2000);
-
-		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 26, 3);
-		String actualText = logInPage.getAlertDanger().getText();
+		
+		 String textForAssertion = citacIzExcela.getStringData("LOG IN", 26, 3); 
+		 String  actualText = logInPage.getWrongCredentials().getText(); 
+		 assertEquals(actualText,  textForAssertion); 
 	}
 
 	@Test(priority = 10)
@@ -69,9 +69,11 @@ public class LogInTests extends BaseTests {
 		logInPage.signIn();
 		Thread.sleep(2000);
 
-		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 41, 3);
-		String actualText = logInPage.getAlertDanger().getText();
-	}
+		 String textForAssertion = citacIzExcela.getStringData("LOG IN", 41, 3); 
+		 String  actualText = logInPage.getWrongCredentials().getText(); 
+		 assertEquals(actualText,  textForAssertion); 
+		 }
+
 
 	@Test(priority = 15)
 	public void logInWithEmptyCredentials() throws InterruptedException {
@@ -79,9 +81,10 @@ public class LogInTests extends BaseTests {
 		Thread.sleep(2000);
 		logInPage.signIn();
 		Thread.sleep(2000);
-
+	
 		String textForAsssertion = citacIzExcela.getStringData("LOG IN", 56, 3);
-		String actualText = logInPage.getAlertDanger().getText();
+		String actualText = logInPage.getEmptyCredentials().getText(); 
+		assertEquals(actualText, textForAsssertion);
 	}
 
 	@Test(priority = 20)
@@ -101,6 +104,7 @@ public class LogInTests extends BaseTests {
 
 		String textForAsssertion = citacIzExcela.getStringData("LOG OUT", 11, 3);
 		String actualText = logInPage.getSignOutButton().getText();
+		assertEquals(actualText, textForAsssertion);
 	}
 
 	@AfterMethod
@@ -109,3 +113,5 @@ public class LogInTests extends BaseTests {
 		driver.navigate().refresh();
 	}
 }
+
+

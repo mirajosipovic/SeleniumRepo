@@ -47,8 +47,8 @@ public class MyAddressesTests extends BaseTests {
 		myAddressesPage.selectStateField(state);
 		Thread.sleep(5200);
 				
-		String zip = citacIzExcela.getStringData("MY ADDRESS", 11, 3);
-		myAddressesPage.zipPostalCodeField(null);
+		String zip = citacIzExcela.getStringData("MY ADDRESS", 11, 3);  //ovde pada test
+		myAddressesPage.zipPostalCodeField(zip);
 		Thread.sleep(2000);
 			 
 		String homePhone = citacIzExcela.getStringData("MY ADDRESS", 12, 3);
@@ -95,8 +95,8 @@ public class MyAddressesTests extends BaseTests {
 		myAddressesPage.selectStateField(state);
 		Thread.sleep(2000);
 	
-		String zip = citacIzExcela.getStringData("MY ADDRESS", 31, 3);
-		myAddressesPage.zipPostalCodeField(null);
+		String zip = citacIzExcela.getStringData("MY ADDRESS", 11, 3);  //ovde pada test
+		myAddressesPage.zipPostalCodeField(zip);
 		Thread.sleep(2000);
 		
 		String homePhone = citacIzExcela.getStringData("MY ADDRESS", 32, 3);
